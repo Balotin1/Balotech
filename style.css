@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff3a;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Estilos do cabeçalho */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(78, 78, 78, 0.082);
+    color: #3a3a3a52;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu ul li a:hover {
+    color: rgb(12, 0, 184);
+    transition: color 1.0s;
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 20px;
+}
+
+/* Estilos dos serviços */
+
+.Serviços {
+    max-width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.carousel-general-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 900px; 
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 100px; 
+    display:contents;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px; 
+}
+.carousel-item:last-child {
+    margin-right: 0; 
+}
+
+.carousel-item img {
+    width: 100%; 
+    object-fit:contain;
+    border-radius: 20px;
+}
+
+.carousel-item ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+.carousel-item-button {
+    background-color: floralwhite;
+    border: 2px solid rgb(0, 12, 180);
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 1.5s, color 1.5s;
+}
+
+.carousel-item-button:hover {
+    background-color: rgb(13, 0, 189);
+    color: #ffffff;
+    transition: background-color 1.5s, color 1.5s;
+}
+
+.carousel-btn {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1.5s, color 1.5s;
+}
+
+/* Estilo do rodapé */
+footer {
+    /* Remova a propriedade position: fixed */
+    width: 100%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 5px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #000000;
+    margin-top: 20px; 
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+footer a{
+    color: #04003a;
+    text-decoration: none;
+    transition: color 1.5s;
+}
+
+footer a:hover{
+    color: rgb(24, 20, 255);
+
+}
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
+        color: #000000;
+    }
+    .mobile-menu-open {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color:transparent;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 2;
+    }
+    .mobile-menu-open ul {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .mobile-menu-open a {
+        color: #001aff;
+    }
+}

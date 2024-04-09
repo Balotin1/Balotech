@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Btech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #525252cc;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            margin: 20px;
+        }
+        .carousel-item {
+            display: none; 
+        }
+        .carousel-item:first-child {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="Logo1.png.jpg" alt="logo Btech"/>
+        </a>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-icon">&#9776;</div>
+    </header>
+    <section class="Serviços">
+        <div class="carousel-general-container">
+            <div class="carousel-navigation">
+                <button id="prevBtn" class="carousel-item-btn">◀</button>
+                <button id="nextBtn" class="carousel-item-btn">▶</button>
+            </div>
+            <h1> Serviços Btech</h1>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="serviço.png.png" alt="serviço Btech"/> 
+                        <ul>
+                            <li>Criar Site</li>
+                            <li>Valor: Sob consulta</li>
+                            <li>Personalizado e profissional</li>
+                        </ul>
+                        <button class="carousel-item-button">Peça seu orçamento agora!</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="serviço2.png.jpg" alt="serviço Btech 2"/> 
+                        <ul>
+                            <li>Desenvolvimento de Aplicativos</li>
+                            <li>Valor: Sob consulta</li>
+                            <li>Entrega rápida e eficiente</li>
+                        </ul>
+                        <button class="carousel-item-button">Saiba mais</button>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="serviço3.png.jpg" alt="serviço Btech 3"/> 
+                        <ul>
+                            <li>Consultoria em TI</li>
+                            <li>Valor: Sob consulta</li>
+                            <li>Profissionais especializados</li>
+                        </ul>
+                        <button class="carousel-item-button">Entre em contato</button>        
+        </div>
+    </section> 
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="blank" rel="noopener noreferrer">
+        <img src="instagram.jpeg" alt="instagram Btech" width="32px" height="32px"/></a>
+        <a href="https://www.facebook.com/?locale=pt_BR" target="blank" rel="noopener noreferrer">
+        <img src="facebook.png" alt="facebook Btech" width="32px" height="32px"/></a>
+        <a href="https://web.whatsapp.com/" target="blank" rel="noopener noreferrer">
+        <img src="whatsapp.png" alt="whatsapp Btech" width="32px" height="32px"/></a>
+    </div>
+    <p>Btech-Todos os direitos reservados</p>
+    <a href="tel: +9999999">(xx)xxxx-xxxx</a>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+            const menu = document.querySelector('.menu');
+    
+            mobileMenuIcon.addEventListener('click', function() {
+                console.log('Clique no ícone do menu móvel');
+                menu.classList.toggle('mobile-menu-open');
+            });
+    
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
+    
+            prevBtn.addEventListener('click', () => {
+                carouselItems[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+                carouselItems[currentIndex].style.display = 'block';
+            });
+    
+            nextBtn.addEventListener('click', () => {
+                carouselItems[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                carouselItems[currentIndex].style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
